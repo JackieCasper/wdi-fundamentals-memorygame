@@ -1,31 +1,74 @@
 body {
 	margin: 0 auto;
 	text-align: center;
+	font-family: sans-serif;
+	background-color: #707070;
+	color: white;
 }
 
 h1 {
-	color: rgb(2, 132, 130);
+	color: #78efd0;
 }
 
 h2 {
-	color: #ffd700;
+	color: #ffbf00;
+	margin: 40px 0 0 0;
+}
+
+input {
+	display: inline-block;
+	clear: both;
+}
+
+section p {
+	padding: 10px;
+	max-width: 800px;
+	margin: 0 auto;
+	margin-bottom: 40px;
 }
 
 .board {
 	height: 80%;
-	width: 50%;
+	max-width: 80%;
 	display: inline-block;
 	height: 50%;
+	margin: 40px 0px;
 }
 
 .card {
 	height: 200px;
 	width: 150px;
-	border: 1px solid black;
-	background-color: yellow;
-	border-radius: 10px;
+	box-shadow: 2px 0px 10px rgba(0, 0, 0, .4);
+	background-color: #ffbf00;
+	border-radius: 25px;
 	float: left;
-	margin: 8%;
+	margin: 2%;
+	background-size: contain;
+	background-position: center;
+	cursor: pointer;
+}
+
+.queen {
+	background-image: url(queen.png);
+}
+
+.king {
+	background-image: url(king.png);
+}
+
+.jack {
+	background-image: url(jack.png);
+}
+
+.flipped {
+	cursor: auto;
+	pointer-events: none;
+}
+
+.matched {
+	background-color: #ee5f3c;
+	pointer-events: none;
+	background-image: url(star.png);
 }
 
 nav {
@@ -35,14 +78,29 @@ nav {
 nav a {
 	background-color: #ffbf00;
 	color: white;
-	padding: 35px;
+	padding: 10px 35px;
 	display: block;
 	float: left;
 	text-decoration: none;
+	border: 1px solid #808080;
 }
 
 nav a:hover {
 	background-color: #ee5f3c;
+}
+
+button {
+	background: #ffbf00;
+	border: 0px;
+	outline: 0px;
+	padding: 5px 8px;
+	color: white;
+	font-size: 16px;
+}
+
+input {
+	padding: 5px 8px;
+	width: 50px;
 }
 
 .clearfix:after {
@@ -55,9 +113,11 @@ nav a:hover {
 }
 
 footer {
+	padding: 2px;
 	background-color: #808080;
 }
 
 footer span {
-	color: red;
+	color: #9b3a2a;
+	font-weight: 600;
 }
